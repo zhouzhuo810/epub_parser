@@ -1,5 +1,6 @@
-# dart-epub
-[![Build Status](https://travis-ci.org/orthros/dart-epub.svg?branch=master)](https://travis-ci.org/orthros/dart-epub)
+# epub_parser
+
+It package is [dart-epub](https://github.com/orthros/dart-epub) fork
 
 Epub Reader and Writer for Dart inspired by [this fantastic C# Epub Reader](https://github.com/versfx/EpubReader)
 
@@ -9,14 +10,14 @@ This does not rely on the ```dart:io``` package in any way, so it is avilable fo
 Add the package to the ```dependencies``` section of your pubspec.yaml
 ```
 dependencies:
-  epub: ^2.0.0
+  epub_parser: any
 ```
 
 ## Example
 ```dart
 
 //Get the epub into memory somehow
-String fileName = "hittelOnGoldMines.epub";
+String fileName = 'sample.epub';
 String fullPath = path.join(io.Directory.current.path, fileName);
 var targetFile = new io.File(fullPath);
 List<int> bytes = await targetFile.readAsBytes();
@@ -57,7 +58,7 @@ epubBook.Chapters.forEach((EpubChapter chapter) {
             
 // CONTENT
 
-// Book's content (HTML files, stlylesheets, images, fonts, etc.)
+// Book's content (HTML files, stylesheets, images, fonts, etc.)
 EpubContent bookContent = epubBook.Content;
 
             
