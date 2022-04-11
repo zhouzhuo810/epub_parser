@@ -6,8 +6,6 @@ import 'package:epub_parser/epubx.dart';
 main(List<String> args) async {
   //Get the epub into memory somehow
   String fileName = "alicesAdventuresUnderGround.epub";
-  // String fileName = "adopting-elixir_p1_0.epub";
-  // String fileName = "designing-elixir-systems-with-otp_p1_0.epub";
   // String fileName = "effectivekotlin.epub";
   String fullPath = path.join(io.Directory.current.path, fileName);
   var targetFile = new io.File(fullPath);
@@ -31,8 +29,8 @@ main(List<String> args) async {
   print('Authors: $authors');
 
 // Book's cover image (null if there is no cover)
-  Image? coverImage = epubBook.CoverImage;
-  print('Cover image: ${coverImage != null}');
+  var coverImage = epubBook.CoverImage;
+  print('Cover image: ${coverImage != null}\n$coverImage');
 
 // CHAPTERS
 

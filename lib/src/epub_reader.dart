@@ -88,7 +88,7 @@ class EpubReader {
     result.AuthorList = epubBookRef.AuthorList;
     result.Author = epubBookRef.Author;
     result.Content = await readContent(epubBookRef.Content!);
-    result.CoverImage = await epubBookRef.readCover();
+    result.CoverImage = await epubBookRef.readCoverAsUint8List();
     var chapterRefs = await epubBookRef.getChapters();
     result.Chapters = await readChapters(chapterRefs);
 

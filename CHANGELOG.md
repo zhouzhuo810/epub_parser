@@ -1,3 +1,7 @@
+## 3.0.1
+### Fixed
+- Some epubs are not able to read or open.
+- Fix to get the cover image
 ## 3.0.0
 ### Changed
 - `metadata` file now saves as `mimetype` [pull#1](https://github.com/rbcprolabs/epubx.dart/pull/1) 

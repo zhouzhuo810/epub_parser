@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
 import 'package:image/image.dart';
@@ -58,5 +59,9 @@ class EpubBookRef {
 
   Future<Image?> readCover() async {
     return await BookCoverReader.readBookCover(this);
+  }
+
+  Future<Uint8List?> readCoverAsUint8List() async {
+    return await BookCoverReader.readBookCoverAsListInt(this);
   }
 }
