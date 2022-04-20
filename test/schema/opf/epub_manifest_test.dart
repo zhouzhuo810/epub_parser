@@ -1,7 +1,7 @@
 library epubreadertest;
 
-import 'package:epub/src/schema/opf/epub_manifest.dart';
-import 'package:epub/src/schema/opf/epub_manifest_item.dart';
+import 'package:epub_parser/src/schema/opf/epub_manifest.dart';
+import 'package:epub_parser/src/schema/opf/epub_manifest_item.dart';
 import 'package:test/test.dart';
 
 main() async {
